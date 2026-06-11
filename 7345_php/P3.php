@@ -1,12 +1,13 @@
 <?php
+function calculatePercentage($sub1, $sub2, $sub3, $sub4, $sub5)
+{
+    $totalMarks = $sub1 + $sub2 + $sub3 + $sub4 + $sub5;
+    $percentage = ($totalMarks / 500) * 100;
 
-$a = 20;
-$b = 10;
+    return $percentage;
+}
 
-echo "Addition = " . ($a + $b) . "<br>";
-echo "Subtraction = " . ($a - $b) . "<br>";
-echo "Multiplication = " . ($a * $b) . "<br>";
-echo "Division = " . ($a / $b) . "<br>";
-echo "Modulus = " . ($a % $b) . "<br>";
+$percentage = calculatePercentage(60, 75, 80, 85, 90);
 
+echo "Percentage: " . $percentage . "%";
 ?>
